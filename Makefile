@@ -13,11 +13,11 @@ run_server: $(TARGET_SERVER)
 run_client: $(TARGET_CLIENT)
 	$^ $(RUN_IP) $(RUN_PORT)
 
-$(TARGET_SERVER): src/server.o src/ftp_socket.o
+$(TARGET_SERVER): src/server.o src/ftp_socket.o src/ftp_command.o
 	mkdir -p bin
 	$(CC) $(CFLAGS) -o $@ $^
 
-$(TARGET_CLIENT): src/client.o src/ftp_socket.o
+$(TARGET_CLIENT): src/client.o src/ftp_socket.o src/ftp_command.o
 	mkdir -p bin
 	$(CC) $(CFLAGS) -o $@ $^
 
