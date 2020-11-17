@@ -8,3 +8,4 @@ C로 FTP Client/Server 구현하기
 $ make # Build
 $ make run_server # Server Program 실행
 $ make run_client # Client Program 실행
+```
